@@ -2,22 +2,15 @@ package com.zainjafri.codechallenge.product;
 
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
+//Product Entity Class
 @Entity
 @Table
 public class Product {
-    /*@SequenceGenerator(
-            name = "product_sequence",
-            sequenceName = "product_sequence",
-            allocationSize = 1
-    )*/
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "product_sequence"
-//    )
+    //Primary Key
     @Id
+    //Inorder to automatically generate productId in sequence of P01,P02,P03 and so on..
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
     @GenericGenerator(
             name = "product_sequence",
@@ -31,17 +24,11 @@ public class Product {
     private String ProductDesc;
     private Integer ProductUnit;
 
+    //A Default Constructor
     public Product() {
     }
 
-    /*public Product(String productId, String productCategory, String productName, String productDesc, Integer productUnit) {
-        ProductId = productId;
-        ProductCategory = productCategory;
-        ProductName = productName;
-        ProductDesc = productDesc;
-        ProductUnit = productUnit;
-    }*/
-
+    //Constructor for Product Class
     public Product(String productCategory, String productName, String productDesc, Integer productUnit) {
         ProductCategory = productCategory;
         ProductName = productName;
@@ -49,6 +36,7 @@ public class Product {
         ProductUnit = productUnit;
     }
 
+    //Getter and Setters...
     public String getProductId() {
         return ProductId;
     }
@@ -89,6 +77,7 @@ public class Product {
         ProductUnit = productUnit;
     }
 
+    //toString() method to display values of Product in string format.
     @Override
     public String toString() {
         return "Product{" +

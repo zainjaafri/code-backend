@@ -8,10 +8,10 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.type.LongType;
 import org.hibernate.type.Type;
 import org.springframework.data.mapping.MappingException;
-
 import java.io.Serializable;
 import java.util.Properties;
 
+//Custom Generator Class for Generating Sequence in form of P01,P02,P03 and so on...
 public class StringPrefixedSequenceIdGenerator extends SequenceStyleGenerator {
 
     //public static final String VALUE_PREFIX_PARAMETER = "valuePrefix";
