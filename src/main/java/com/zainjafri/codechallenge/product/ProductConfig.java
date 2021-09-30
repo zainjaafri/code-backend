@@ -22,15 +22,13 @@ public class ProductConfig {
     @Bean
     CommandLineRunner commandLineRunnerForProduct(ProductRepository productRepository){
         return args -> {
-            /*
-            Product one = new Product("Commercial","A320","Passenger aircraft family",2);
+            /*Product one = new Product("Commercial","A320","Passenger aircraft family",2);
             Product two = new Product("Commercial","A380","Passenger aircraft family",3);
             Product three = new Product("Space","Sentinel","Satellite family",1);
             Product four = new Product("Helicopter","H135","Light twin",2);
             Product five = new Product("Helicopter","H125","Intermediate single",3);
 
-            productRepository.saveAll(List.of(one,two,three,four,five));
-            */
+            productRepository.saveAll(List.of(one,two,three,four,five));*/
         };
 
     }
